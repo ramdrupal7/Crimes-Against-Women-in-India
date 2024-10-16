@@ -11,7 +11,8 @@ Database : Mysql (relational database)
 environment variable : .env
 
 ------------------------------------------------------------------------------------------------
-Command to import data (below)------------------------------------------------------------------------------------------------
+Command to import data (below)
+------------------------------------------------------------------------------------------------
 
 # to run imports of data from csv file
 # https://www.kaggle.com/datasets/balajivaraprasad/crimes-against-women-in-india-2001-2021?resource=download&select=CrimesOnWomenData.csv 
@@ -20,7 +21,8 @@ Command to import data (below)--------------------------------------------------
 
 Steps :
 ------------------------------------------------------------------------------------------------
-# Project Setup Instructions ------------------------------------------------------------------------------------------------
+# Project Setup Instructions 
+------------------------------------------------------------------------------------------------
 Follow the steps below to set up and run the project:
 
 1. **Navigate to the Project Folder**
