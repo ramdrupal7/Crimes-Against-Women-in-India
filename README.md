@@ -18,8 +18,6 @@ Command to import data (below)
 # https://www.kaggle.com/datasets/balajivaraprasad/crimes-against-women-in-india-2001-2021?resource=download&select=CrimesOnWomenData.csv 
 
 # https://www.kaggle.com/datasets/danishxr/poptable   Downloaded for Lat and long for states
-
-Steps :
 ------------------------------------------------------------------------------------------------
 # Project Setup Instructions 
 ------------------------------------------------------------------------------------------------
