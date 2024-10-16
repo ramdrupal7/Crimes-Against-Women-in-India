@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Data for <%= stateName %></title>
+
+    <%- include('partials/styles') %> <!-- Include additional styles -->
+    
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Crime Data for <%= stateName %></h1>
+
+        <!-- States Dropdown -->
+        <div class="mb-4">
+            <label for="stateSelect">Select a State:</label>
+            <select id="stateSelect" class="form-select" onchange="switchState()">
+                <option disabled>Select State</option>
+                <% states.forEach(state => { %>
+                    <option value="<%= state.stateName %>" 
+                            <%= stateName === state.stateName ? 'selected' : '' %>>
+                            <%= state.stateName %></option>
+                <% }); %>
+            </select>
+        </div>
+
+        <!-- Crime Table -->
+        <table id="crimeTable" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Total Cases</th>
+                    <th>Rape Cases</th>
+                    <th>Kidnap & Assault</th>
+                    <th>Dowry Deaths</th>
+                    <th>Assault Against Women</th>
+                    <th>Assault against Modesty of Women</th>
+                    <th>Domestic Violence</th>
+                    <th>Women Trafficking</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <% crimes.forEach(crime => { %>
+                    <tr>
+                        <td><%= crime.year %></td>
+                        <td>
+                            <% 
+                            const totalCases = 
+                                (crime.rape || 0) + 
+                                (crime.kidnap_and_assault || 0) + 
+                                (crime.dowry_deaths || 0) + 
+                                (crime.assault_against_women || 0) + 
+                                (crime.assault_against_modesty || 0) + 
+                                (crime.domestic_violence || 0) + 
+                                (crime.women_trafficking || 0);
+                            %>
+                            <%= totalCases %>
+                        </td>
+                        <td><%= crime.rape %></td>
+                        <td><%= crime.kidnap_and_assault %></td>
+                        <td><%= crime.dowry_deaths %></td>
+                        <td><%= crime.assault_against_women %></td>
+                        <td><%= crime.assault_against_modesty %></td>
+                        <td><%= crime.domestic_violence %></td>
+                        <td><%= crime.women_trafficking %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <a href="/">Back to Home</a>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#crimeTable').DataTable();
+        });
+
+        function switchState() {
+            var selectedState = document.getElementById('stateSelect').value;
+            window.location.href = '/state/' + selectedState; // Redirect to the selected state's crime data page
+        }
+    </script>
+</body>
+</html>

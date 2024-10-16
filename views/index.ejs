@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Rates Across Indian States</title>
+    <%- include('partials/styles') %> <!-- Include additional styles -->
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <h1 class="mt-4">Crime Rates Across Indian States</h1>
+    
+    <label for="yearSelect">Select Year:</label>
+    <select id="yearSelect" class="year-select">
+        <!-- Options will be dynamically populated here -->
+    </select>
+    
+    <div id="map"></div> <!-- Set a height for the map -->
+    <div id="stateList" class="state-list"></div>
+        <!-- Clickable state numbers will be injected here -->
+    </div>
+    <script src="/js/scripts.js"></script>
+    <script>
+        // loadCrimeData(); // Call the function to load crime data
+    </script>
+</body>
+</html>
