@@ -24,7 +24,7 @@ To run data imports from CSV files, use the following resources:
 ------------------------------------------------------------------------------------------------
 Follow the steps below to set up and run the project:
 
-1. **Navigate to the Project Folder**
+1. **Clone the project repository and navigate to the project directory**
    - Open your terminal or command prompt and change to the project directory.
 
 2. **Open the Command Prompt (CMD)**
