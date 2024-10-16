@@ -11,13 +11,14 @@ Database : Mysql (relational database)
 environment variable : .env
 
 ------------------------------------------------------------------------------------------------
-Command to import data (below)
+ Data Import Instructions (below)
 ------------------------------------------------------------------------------------------------
 
-# to run imports of data from csv file
-# https://www.kaggle.com/datasets/balajivaraprasad/crimes-against-women-in-india-2001-2021?resource=download&select=CrimesOnWomenData.csv 
+To run data imports from CSV files, use the following resources:
 
-# https://www.kaggle.com/datasets/danishxr/poptable   Downloaded for Lat and long for states
+- [Crimes Against Women in India (2001-2021)](https://www.kaggle.com/datasets/balajivaraprasad/crimes-against-women-in-india-2001-2021?resource=download&select=CrimesOnWomenData.csv)
+- [State Latitude and Longitude Data](https://www.kaggle.com/datasets/danishxr/poptable)
+
 ------------------------------------------------------------------------------------------------
 # Project Setup Instructions 
 ------------------------------------------------------------------------------------------------
